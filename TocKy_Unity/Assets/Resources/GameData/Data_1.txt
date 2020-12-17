@@ -1,0 +1,5 @@
+a	A
+ai	AJ
+am	A-T
+an	A-T
+ang	AG

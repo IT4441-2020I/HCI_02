@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>HCI2_Hoc Go Toc Ky</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="./../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="./../css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="./../css/tien-do-ca-nhan.css"  rel="stylesheet">
+    <link href="./../css/toc-ky.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+<nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
+    <a class="nav-link font-weight-bolder" href="../trang-chu.html">
+        TocKy_HCI2
+    </a>
+    <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <!-- Topbar Navbar -->
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="../hoc-go/hoc-go.html">Học Gõ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../luyen-tap.html">Luyện Tập</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../tro-choi.html">Trò Chơi</a>
+        </li>
+        <li class="nav-item link-active">
+            <a class="nav-link " href="kiem-tra-tien-do.html">Đánh Giá Tiến Độ</a>
+        </li>
+        <div class="topbar-divider d-none d-sm-block"></div>
+        <!-- Nav Item - User Information -->
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Trần Đình Thắng</span>
+                <img class="img-profile rounded-circle"
+                     src="https://scontent.fhan2-5.fna.fbcdn.net/v/t1.0-9/126044059_1231756843884396_9201946568134028754_n.jpg?_nc_cat=107&ccb=2&_nc_sid=09cbfe&_nc_ohc=fImBUINZy5AAX8URQcc&_nc_ht=scontent.fhan2-5.fna&oh=dcb3db9c2619e446feca71f6be5e0079&oe=5FEE9EE5">
+            </a>
+            <!-- Dropdown - User Information -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                 aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="../thong-tin-ca-nhan.html">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Thông tin cá nhân
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Đăng xuất
+                </a>
+            </div>
+        </li>
+
+    </ul>
+
+</nav>
+<!-- Page Wrapper -->
+<div id="wrapper" class="body">
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link" href="kiem-tra-tien-do.html">
+                <i class="fas fa-fw fa-check-square"></i>
+                <span>Kiểm Tra Tiến Độ</span></a>
+        </li>
+
+        <!-- Nav Item - Charts -->
+        <li class="nav-item">
+            <a class="nav-link active-link-sidebar" href="tien-do-ca-nhan.html">
+                <i class="fas fa-fw fa-battery-half"></i>
+                <span>Tiến Độ Cá Nhân</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    </ul>
+    <!-- End of Sidebar -->
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+            <!-- Begin Page Content -->
+            <div class="container-fluid h-100">
+                <!-- Content Row -->
+                <div class="row h-100">
+                    <div class="col-lg-12 mb-4">
+                        <h1 class="h3 mb-4 text-gray-800">Đánh Giá Tiến Bộ / Tiến Độ Cá Nhân</h1>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold ext-primary">Tiến Độ Cá Nhân</h6>
+                            </div>
+                            <div class="card-body">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li id="newbie"><div class="itemProgress"><strong>Newbie</strong><i class="fas fa-fw fa-battery-empty" data-toggle="tooltip" title="dưới 100 từ/phút"></i></div></li>
+                                    <li class="active" id="junior"><div class="itemProgress"><strong>Junior</strong><i class="fas fa-fw fa-battery-quarter" data-toggle="tooltip" title="100 – 200 từ/ phút"></i></div></li>
+                                    <li id="senior"><div class="itemProgress"><strong>Senior</strong><i class="fas fa-fw fa-battery-half" data-toggle="tooltip" title="200 – 300 từ/phút"></i></div></li>
+                                    <li id="master"><div class="itemProgress"><strong>Master</strong><i class="fas fa-fw fa-battery-three-quarters" data-toggle="tooltip" title="300 – 400 từ/phút"></i></div></li>
+                                    <li id="professional"><div class="itemProgress"><strong>Professional</strong><i class="fas fa-fw fa-battery-full" data-toggle="tooltip" title="trên 400 từ/phút"></i></div></li>
+                                </ul>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+                                </div> <br> <!-- fieldsets -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold ext-primary">Lịch Sử Kiểm Tra Tiến Độ</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0" aria-rowcount="5">
+                                        <thead>
+                                        <tr>
+                                            <th>Ngày giờ</th>
+                                            <th>Tốc độ trung bình</th>
+                                            <th>Độ chính xác</th>
+                                        </tr>
+                                        </thead>
+                                        <tfoot>
+                                        <tr>
+                                            <th>Ngày giờ</th>
+                                            <th>Tốc độ trung bình(từ/phút)</th>
+                                            <th>Độ chính xác(%)</th>
+                                        </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        <tr>
+                                            <td>Dec 13, 2020 11:10 AM</td>
+                                            <td>160</td>
+                                            <td>85</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 12, 2020 4:10 PM</td>
+                                            <td>160</td>
+                                            <td>85</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 11, 2020 7:10 PM</td>
+                                            <td>160</td>
+                                            <td>82</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 10, 2020 8:10 PM</td>
+                                            <td>159</td>
+                                            <td>81</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 08, 2020 5:00 PM</td>
+                                            <td>159</td>
+                                            <td>80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 07, 2020 7:00 PM</td>
+                                            <td>158</td>
+                                            <td>71</td>
+                                        </tr><tr>
+                                            <td>Dec 05, 2020 7:30 PM</td>
+                                            <td>158</td>
+                                            <td>70</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>155</td>
+                                            <td>69</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 04, 2020 8:27 PM</td>
+                                            <td>155</td>
+                                            <td>68</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 04, 2020 10:10 AM</td>
+                                            <td>152</td>
+                                            <td>68</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>151</td>
+                                            <td>65</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 03, 2020 8:14 AM</td>
+                                            <td>151</td>
+                                            <td>65</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 03, 2020 6:27 AM</td>
+                                            <td>150</td>
+                                            <td>65</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 02, 2020 8:10 AM</td>
+                                            <td>147</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 01, 2020 9:10 PM</td>
+                                            <td>147</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 01, 2020 6:10 PM</td>
+                                            <td>147</td>
+                                            <td>62</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 01, 2020 8:10 AM</td>
+                                            <td>146</td>
+                                            <td>62</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nov 30, 2020 3:10 PM</td>
+                                            <td>144</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 30, 2020 2:10 PM</td>
+                                            <td>140</td>
+                                            <td>55</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 29, 2020 9:20 AM</td>
+                                            <td>140</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 28, 2020 7:44 AM</td>
+                                            <td>120</td>
+                                            <td>50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 27, 2020 10:15 PM</td>
+                                            <td>120</td>
+                                            <td>45</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 27, 2020 11:10 AM</td>
+                                            <td>115</td>
+                                            <td>45</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 27, 2020 7:10 AM</td>
+                                            <td>110</td>
+                                            <td>44</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold ext-primary">Bảng Xếp Hạng</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0" aria-rowcount="5">
+                                        <thead>
+                                        <tr>
+                                            <th>Xếp hạng</th>
+                                            <th>Tên người dùng</th>
+                                            <th>Thời Gian</th>
+                                            <th>Số Từ Đúng</th>
+                                            <th>Số Từ Sai</th>
+                                            <th>Tốc độ gõ</th>
+                                        </tr>
+                                        </thead>
+                                        <tfoot>
+                                        <tr>
+                                            <th>Xếp hạng</th>
+                                            <th>Tên người dùng</th>
+                                            <th>Thời Gian</th>
+                                            <th>Trận thắng</th>
+                                            <th>Trận thua</th>
+                                            <th>Tốc độ gõ</th>
+                                        </tr>
+                                        </tfoot>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Cao Tùng Lâm</td>
+                                            <td>Dec 13, 2020 11:10 AM</td>
+                                            <td>100</td>
+                                            <td>9</td>
+                                            <td>120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Cao Mình Khang</td>
+                                            <td>Dec 12, 2020 4:10 PM</td>
+                                            <td>90</td>
+                                            <td>2</td>
+                                            <td>148</td>
+                                        </tr>
+                                        <tr style="background: #34626c; color: #fff">
+                                            <td>3</td>
+                                            <td>Trần Đình Thắng</td>
+                                            <td>Dec 11, 2020 7:10 PM</td>
+                                            <td>88</td>
+                                            <td>13</td>
+                                            <td>150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Phạm Duy Hùng</td>
+                                            <td>Dec 10, 2020 8:10 PM</td>
+                                            <td>80</td>
+                                            <td>4</td>
+                                            <td>220</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Phạm Gia Minh</td>
+                                            <td>Dec 08, 2020 5:00 PM</td>
+                                            <td>70</td>
+                                            <td>6</td>
+                                            <td>210</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Trần Thị Huế</td>
+                                            <td>Dec 07, 2020 7:00 PM</td>
+                                            <td>70</td>
+                                            <td>8</td>
+                                            <td>215</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>ao Minh Kha</td>
+                                            <td>Dec 07, 2020 7:00 PM</td>
+                                            <td>45</td>
+                                            <td>8</td>
+                                            <td>80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Nguyen Xuan Hoan</td>
+                                            <td>Dec 05, 2020 7:30 PM</td>
+                                            <td>40</td>
+                                            <td>8</td>
+                                            <td>120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Nguyen Van Toan</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>40</td>
+                                            <td>8</td>
+                                            <td>150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Hoa Xuan Duong</td>
+                                            <td>Dec 04, 2020 8:27 PM</td>
+                                            <td>6</td>
+                                            <td>8</td>
+                                            <td>78</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>Mai Thi Thao</td>
+                                            <td>Dec 04, 2020 10:10 AM</td>
+                                            <td>41</td>
+                                            <td>8</td>
+                                            <td>168</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>Tran Quy Hoa</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>Duong Minh Nam</td>
+                                            <td>Dec 03, 2020 8:14 AM</td>
+                                            <td>4</td>
+                                            <td>8</td>
+                                            <td>340</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>Huu Viet</td>
+                                            <td>Dec 10, 2020 8:10 PM</td>
+                                            <td>70</td>
+                                            <td>8</td>
+                                            <td>230</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>Nguyen Van Thanh</td>
+                                            <td>Dec 13, 2020 11:10 AM</td>
+                                            <td>99</td>
+                                            <td>8</td>
+                                            <td>270</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>Tran Dinh Trong</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>150</td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>Tran Dinh Hai</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>100</td>
+                                            <td>8</td>
+                                            <td>135</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>Vu Tien Thanh</td>
+                                            <td>Dec 27, 2020 7:10 AM</td>
+                                            <td>3</td>
+                                            <td>8</td>
+                                            <td>165</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>Phan Van Long</td>
+                                            <td>Dec 27, 2020 7:10 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>175</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>Tran Xuan Hoan</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21</td>
+                                            <td>Nguyen Thanh Tung</td>
+                                            <td>Dec 27, 2020 10:15 PM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>450</td>
+                                        </tr>
+                                        <tr>
+                                            <td>22</td>
+                                            <td>Cao Tung Anh</td>
+                                            <td>Dec 27, 2020 7:10 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>167</td>
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td>Người dùng 1</td>
+                                            <td>Dec 27, 2020 7:10 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>24</td>
+                                            <td>Tran Dinh Nam</td>
+                                            <td>Dec 27, 2020 10:15 PM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>Do Van Hoa</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>26</td>
+                                            <td>Tran Dinh Huy</td>
+                                            <td>Dec 27, 2020 10:15 PM</td>
+                                            <td>67</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27</td>
+                                            <td>Nguyen Van Thang</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>3</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>28</td>
+                                            <td>Tran Van Trung</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>6</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>29</td>
+                                            <td>Pham Nhat Vuong</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>30</td>
+                                            <td>Tran Van Huy</td>
+                                            <td>Dec 27, 2020 10:15 PM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31</td>
+                                            <td>Tran Tu Binh</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31</td>
+                                            <td>Tran Tu Binh</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31</td>
+                                            <td>Tran Tu Binh</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>34</td>
+                                            <td>Hoang Quoc Viet</td>
+                                            <td>Dec 05, 2020 9:00 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>35</td>
+                                            <td>Cao Xuan Bach</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>18</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>36</td>
+                                            <td>Nguyen Van Toan</td>
+                                            <td>Dec 28, 2020 7:44 AM</td>
+                                            <td>9</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>37</td>
+                                            <td>Người dùng 1</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>8</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>38</td>
+                                            <td>Người dùng 1</td>
+                                            <td>Dec 28, 2020 7:44 AM</td>
+                                            <td>3</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>39</td>
+                                            <td>Nguyen cong phuong</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>30</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>40</td>
+                                            <td>Nguyen Quang Hai</td>
+                                            <td>Dec 28, 2020 7:44 AM</td>
+                                            <td>20</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>41</td>
+                                            <td>Bui Tien Dung</td>
+                                            <td>Dec 03, 2020 8:25 AM</td>
+                                            <td>11</td>
+                                            <td>8</td>
+                                            <td>100</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold ext-primary">Tốc Độ Gõ Theo Tháng</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="tocDoThang"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold ext-primary">Tốc Độ Gõ Theo Năm</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="tocDoNam"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold ext-primary">Số Lương Từ Gõ Theo Tháng</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-bar">
+                                    <canvas id="soTuThang"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold ext-primary">Số Lương Từ Gõ Theo Năm</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-bar">
+                                    <canvas id="soTuNam"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Row -->
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>&copy; HCI2</span>
+        </div>
+    </div>
+</footer>
+<!-- End of Footer -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Click "Đăng xuất" để đăng xuất khỏi hệ thống  </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Đóng</button>
+                <a class="btn btn-primary" href="../dang-nhap.html">Đăng xuất</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="./../vendor/jquery/jquery.min.js"></script>
+<script src="./../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="./../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="./../js/sb-admin-2.min.js"></script>
+
+<!-- Page level plugins -->
+<script src="./../vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="./../js/demo/chart-area-demo.js"></script>
+<script src="./../js/demo/chart-bar-demo.js"></script>
+<!-- Page level plugins -->
+<script src="./../vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="./../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="./../js/demo/datatables-demo.js"></script>
+<script>
+    $(document)
+        .ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            // $('#dataTable1').DataTable();
+            // $('#dataTable').DataTable();
+            $('#dataTable1').dataTable({
+                "autoWidth": false,
+                "lengthChange": false,
+                "pageLength": 5
+            });
+            $('#dataTable2').dataTable({
+                "autoWidth": false,
+                "lengthChange": false,
+                "pageLength": 5
+            });
+        });
+</script>
+<script>
+    $(document).ready(function(){
+
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var opacity;
+        var current = 1;
+        var steps = $("fieldset").length;
+
+        setProgressBar(current);
+
+        $(".next").click(function(){
+
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
+
+//Add Class Active
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+//show the next fieldset
+            next_fs.show();
+//hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+                step: function(now) {
+// for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    next_fs.css({'opacity': opacity});
+                },
+                duration: 500
+            });
+            setProgressBar(++current);
+        });
+
+        $(".previous").click(function(){
+
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
+
+//Remove class active
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+            previous_fs.show();
+
+//hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+                step: function(now) {
+// for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    previous_fs.css({'opacity': opacity});
+                },
+                duration: 500
+            });
+            setProgressBar(--current);
+        });
+
+        function setProgressBar(curStep){
+            var percent = parseFloat(100 / steps) * curStep;
+            percent = percent.toFixed();
+            $(".progress-bar")
+                .css("width",percent+"%")
+        }
+
+        $(".submit").click(function(){
+            return false;
+        })
+
+    });
+</script>
+</body>
+
+</html>

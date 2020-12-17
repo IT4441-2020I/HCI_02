@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="077d1419-8701-4d3e-a426-15f3060c0582" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/css/toc-ky.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/toc-ky.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trang-chu.html" beforeDir="false" afterPath="$PROJECT_DIR$/trang-chu.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/css/tien-do-ca-nhan.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/tien-do-ca-nhan.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/danh-gia-tien-do/tien-do-ca-nhan.html" beforeDir="false" afterPath="$PROJECT_DIR$/danh-gia-tien-do/tien-do-ca-nhan.html" afterDir="false" />
+>>>>>>> 49e03c1b40ab8056b06b4d6947a219b0dd7cf61e
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lQe3n7HVRET5Uqh0ZgCprkUKys" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hoc-go" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="077d1419-8701-4d3e-a426-15f3060c0582" name="Default Changelist" comment="" />
+      <created>1607533545693</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607533545693</updated>
+      <workItem from="1607533557100" duration="6245000" />
+      <workItem from="1607697800509" duration="6415000" />
+      <workItem from="1607712263605" duration="5763000" />
+      <workItem from="1607788254813" duration="919000" />
+      <workItem from="1607794308776" duration="6366000" />
+      <workItem from="1607863121922" duration="4309000" />
+      <workItem from="1607876959799" duration="606000" />
+      <workItem from="1607994797256" duration="1000" />
+      <workItem from="1607994804959" duration="2196000" />
+      <workItem from="1608107816330" duration="254000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

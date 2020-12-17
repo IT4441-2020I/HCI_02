@@ -1,0 +1,53 @@
+ ! 	*IOEA
+ "	N--SOEW
+ #	-S*IAW
+ $	-S*IOW
+ % 	N--HSIU
+ '	-S*UAY
+ (	-S*UWY
+,	-S*IOY
+-|	*UEAW
+ . 	*IUOA
+ : 	N-UOAY
+ ; 	N-IUOW
+ ? 	-H*IOA
+ [	N--S*OY
+ 	-HUOEY
+-|	-H*IAY
+!	N--H-SWY
+"	-SOEAY
+" 	*IOEW
+'	N--H-SIE
+ '	-S*OEA
+(	-SIOEW
+)	-H*IUA
+) 	-SUOAW
+*	N--SUOY
++	-S*IEW
+,	N--H-S*U
+-	-H-SUAW
+.	N--SUOE
+/	-S*IOA
+:	-H-SIEY
+;	N--H*UW
+<	N--S*UA
+=	N--HAWY
+>	-H*UOY
+>	*IEAW
+?	N--SUEW
+@	-H*OEY
+[	-H-SIEA
+\	-S*IUY
+]	N--HOEY
+] 	*IUEA
+^	N--H-SOW
+_	-H*IUW
+`	-HIUAW
+{	-S*EWY
+|	N--H-SUO
+}	N--S*OE
+} 	-SOEWY
+~	N--H*OA
+~ 	-S*AWY
+ {	-H*IEW
+\r\n	N--HEAY

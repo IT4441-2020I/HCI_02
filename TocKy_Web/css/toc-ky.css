@@ -1,0 +1,106 @@
+.sidebar {
+    background-color: #34626c;
+    background-image: none;
+}
+
+#content-wrapper {
+    background-color: #d6e0f0!important;
+}
+
+body {
+    background-color: #34626c!important;
+    background-image: none!important;
+}
+
+footer.sticky-footer {
+    height: 100px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body {
+    min-height: calc(100vh - 170px);
+}
+
+.toc-ky-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toc-ky-center .row {
+    height: 100%;
+    display: flex;
+    align-items: flex-start!important;
+    font-size: 1.3rem;
+}
+
+#content {
+    padding: 48px 0;
+}
+
+.link-active {
+    font-weight: 700;
+    color: #34626c!important;
+}
+
+.link-active a {
+    font-weight: 700;
+    color: #34626c !important;
+}
+
+.sidebar {
+    height: 100%;
+    min-height: unset;
+}
+
+.active-link-sidebar {
+    font-weight: 700;
+    color: #fff!important;
+}
+
+.active-link-sidebar i {
+    font-weight: 700;
+    color: #fff!important;
+}
+
+button {
+    background-color: rgba(119, 182, 255, 255)!important;
+    border-color: rgba(119, 182, 255, 255)!important;
+    color: #fff!important;
+}
+
+.card-trang-chu {
+
+}
+
+.card-trang-chu:hover .font-weight-bolder{
+    color: #fff!important;
+    font-size: 1.3rem;
+}
+.card-trang-chu .description {
+    font-size: 1rem!important;
+}
+
+.card-trang-chu:hover .description {
+    margin-top: -48px;
+    color: #fff!important;
+    font-size: 1rem!important;
+}
+
+#btnHocGo:hover {
+    background-color: #4e73df !important;
+}
+
+#btnLuyenTap:hover {
+    background-color: #1cc88a !important;
+}
+
+#btnTroChoi:hover {
+    background-color: #36b9cc !important;
+}
+
+#btnDanhGiaTienDo:hover {
+    background-color: #f6c23e !important;
+}
